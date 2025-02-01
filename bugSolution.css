@@ -1,0 +1,8 @@
+To avoid these issues, follow these best practices:
+
+*   **Understand CSS Specificity:**  Learn the rules of how CSS selectors are weighed to determine which style is applied. 
+*   **Use a CSS Preprocessor:** Consider using tools like Sass or Less, which offer features like variables, mixins, and nesting to improve organization and reduce the chance of unexpected specificity conflicts.
+*   **Avoid `!important`:**  Use this declaration sparingly. If you find yourself using it frequently, it often suggests there are underlying issues in your CSS architecture.  Refactor your stylesheets to resolve those issues instead of relying on `!important`.
+*   **Use a CSS Methodology:**  Utilize a method like BEM (Block, Element, Modifier) or SMACSS (Scalable and Modular Architecture for CSS) to create a more organized and maintainable CSS structure. 
+
+The solution in `bugSolution.css` demonstrates these principles, making the styling more predictable and easier to understand.  The `!important` declarations are removed and the selectors are structured to improve clarity.

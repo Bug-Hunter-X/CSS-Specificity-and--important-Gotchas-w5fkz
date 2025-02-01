@@ -1,0 +1,27 @@
+The CSS specificity rules can lead to unexpected styling behavior.  For example, consider this scenario:
+
+```css
+div {
+  color: blue;
+}
+
+.myClass {
+  color: red;
+}
+
+#myID {
+  color: green;
+}
+
+#myID.myClass {
+  color: purple; 
+}
+
+#myID.myClass div {
+  color: yellow;
+}
+```
+
+A `div` element with both the `myClass` and `myID` classes, and nested inside another `div`, will end up yellow due to the high specificity of the `#myID.myClass div` selector.  This might not be intuitive for developers unfamiliar with the cascading and specificity rules.
+
+Another common issue is the use of `!important`, which overrides all specificity rules and can make CSS hard to maintain and debug. Overuse of `!important` can create conflicts and make it difficult to track down the source of styles. 
